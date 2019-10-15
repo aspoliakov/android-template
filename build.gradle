@@ -1,28 +1,44 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    ext.kotlin_version = '1.3.50'
+
+    apply from: "$rootDir/gradle-tools/dependencies-versions.gradle"
+
     repositories {
         google()
         jcenter()
-        
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
+}
+
+plugins {
+    id 'io.gitlab.arturbosch.detekt' version '1.0.0-RC12'
 }
 
 allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url "https://www.jitpack.io" }
+        maven { url "https://dl.bintray.com/kodein-framework/Kodein-DI" }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+detekt {
+    reports {
+        xml.enabled = false
+        html {
+            enabled = true
+            destination = file("$rootDir/reports/detekt.html")
+        }
+    }
+    input = files("$rootDir/app/src/main/java")
+    config = files("$rootDir/gradle-tools/detekt-config.yml")
+    filters = ".*test.*,.*/resources/.*,.*/tmp/.*,.*/dao/.*,.*/migrations/.*"
 }
