@@ -1,0 +1,8 @@
+android {
+  lintOptions {
+    lintConfig file("$rootDir/gradle-tools/lint-rules.xml")
+    htmlOutput file("$rootDir/reports/lint-report.html")
+    xmlReport false
+    abortOnError true
+  }
+}
