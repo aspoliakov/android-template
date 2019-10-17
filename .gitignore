@@ -12,3 +12,8 @@
 /build
 /captures
 .externalNativeBuild
+bin/**
+gen/**
+out/**
+gen-external-apklibs/**
+/reports/**
