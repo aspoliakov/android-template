@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Template</string>
+
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
 </resources>
