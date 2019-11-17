@@ -8,4 +8,9 @@
     <string name="next">Next</string>
     <string name="back">Back</string>
 
+    <string name="open_list_activity">Open List</string>
+    <string name="tik_tak">TikTak: %1$d</string>
+    <string name="item_id">ID: %1$s</string>
+    <string name="item_clicked">Item whid ID: %1$s has clicked</string>
+
 </resources>

@@ -28,7 +28,7 @@
         </activity>
 
         <activity
-            android:name=".ui.screens.template_list.ListActivitty"
+            android:name=".ui.screens.template_list.ListActivity"
             android:screenOrientation="portrait" />
 
     </application>

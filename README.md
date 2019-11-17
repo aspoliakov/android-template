@@ -1,11 +1,13 @@
-# Android Tempale Project. Quick start for monolithic application
+# Android Tempale Project
 
-## Stack
+Quick start for monolithic application.
 
-* Kotlin
-* Rx
-* Kodein
-* Retrofit
-* Room
-* Glide
-* Timber
+## Simple MVP + Rx. Stack:
+
+- Kotlin
+- Rx
+- Kodein
+- Retrofit
+- Room
+- Glide
+- Timber
